@@ -1,5 +1,5 @@
 export type Agendamentos = {
-  id: number;
+  id?: number;
   paciente: string;
   especialidadeId: number;
   especialidadeNome: string;
@@ -7,6 +7,16 @@ export type Agendamentos = {
   convenioNome: string;
   dataHora: Date;
   medico: string;
+};
+
+export type Convenio = {
+  id?: number;
+  nome: string;
+};
+
+export type Especialidade = {
+  id?: number;
+  nome: string;
 };
 
 export type Opcoes = {
