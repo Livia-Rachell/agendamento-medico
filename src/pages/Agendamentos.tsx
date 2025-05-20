@@ -1,4 +1,4 @@
-import Forms from "../components/FormAgendamento";
+import FormAgendamento from "../components/FormAgendamento";
 import Modal from "../components/Modal";
 import TableAgendamentos from "../components/TableAgendamentos";
 
@@ -7,7 +7,11 @@ export default function Agendamentos() {
     <div className="container flex flex-col gap-y-6">
       <div className="flex flex-row">
         <h1 className="text-2xl font-medium w-full">Agendamentos</h1>
-        <Modal buttonName="Agendar" title="Agendar" children={<Forms />} />
+        <Modal
+          buttonName="Agendar"
+          title="Agendar"
+          children={<FormAgendamento />}
+        />
       </div>
 
       <TableAgendamentos

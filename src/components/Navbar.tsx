@@ -33,6 +33,12 @@ export default function Navbar() {
           >
             Convênios
           </Link>
+          <Link
+            to={routes.disponibilidades}
+            className="btn btn-ghost hover:text-primary"
+          >
+            Disponibilidades
+          </Link>
         </div>
       </div>
     </div>
