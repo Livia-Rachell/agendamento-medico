@@ -1,11 +1,10 @@
-import { useEffect, useState } from "react";
-
 import DisponibilidadeFilter from "../components/DisponibilidadeFilter";
 import FormDisponibilidade from "../components/FormDisponibilidade";
 import Modal from "../components/Modal";
 import TableDisponibilidades from "../components/TableDisponibilidades";
 import { listarDisponibilidades } from "../services/disponibilidades";
 import { useModal } from "../hooks/useModal";
+import { useState } from "react";
 
 export interface DisponibilidadeFilterForm {
   especialidadeId: number;

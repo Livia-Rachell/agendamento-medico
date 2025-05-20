@@ -1,10 +1,10 @@
 import { Pencil, Trash2 } from "lucide-react";
 
-import type { Agendamentos } from "../types";
+import type { Agendamento } from "../types";
 import { formatarData } from "../utils";
 
 interface TableAgendamentosProps {
-  agendamentos: Agendamentos[];
+  agendamentos: Agendamento[];
 }
 
 export default function TableAgendamentos({

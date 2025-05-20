@@ -1,5 +1,4 @@
-export type Agendamentos = {
-  id?: number;
+export type Agendamento = {
   paciente: string;
   especialidadeId: number;
   especialidadeNome: string;
