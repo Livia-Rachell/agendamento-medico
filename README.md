@@ -80,7 +80,7 @@ Acesse a aplicação em [http://localhost:5173](http://localhost:5173) (ou porta
 
 ## 📝 Observações
 
-* A API mockada usada neste projeto é: `liviarachelc/medico-mockapi`
+* A API mockada usada neste projeto é: `liviarachelc/medico-mockapi`, a implementação da API está em [Livia-Rachell/medico-mockapi/](http://github.com/Livia-Rachell/medico-mockapi/)
 
 ---
 
