@@ -1,54 +1,89 @@
-# React + TypeScript + Vite
+# Sistema de Agendamento Médico - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é um projeto frontend em React + TypeScript para um sistema de agendamento de consultas médicas. A aplicação consome uma API REST mockada, executada via container Docker.
 
-Currently, two official plugins are available:
+## 🔧 Tecnologias utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Axios](https://axios-http.com/)
+- [Tailwind CSS](https://tailwindcss.com/) + [DaisyUI](https://daisyui.com/)
+- [React Hook Form](https://react-hook-form.com/)
+- [Yup](https://github.com/jquense/yup) para validação
+- [Docker](https://www.docker.com/) + Docker Compose
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Como rodar o projeto
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### 📦 Requisitos
+
+- Node.js (v18+)
+- Docker e Docker Compose
+- NPM ou Yarn
+
+---
+
+### 🐳 Rodando com Docker + Docker Compose
+
+1. **Build e subida dos containers:**
+
+```bash
+docker compose -f docker-compose.yml up --build
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. **Acesse a aplicação:**
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+* Frontend: [http://localhost](http://localhost)
+* API mockada: [http://localhost:3000/api](http://localhost:3000/api)
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+O frontend será servido na porta `80`.
+
+---
+
+
+### ▶️ Rodando localmente (sem Docker)
+
+1. **Clone o repositório:**
+
+```bash
+git clone https://github.com/seu-usuario/agendamento-medico.git
+cd agendamento-medico
+````
+
+2. **Instale as dependências:**
+
+```bash
+npm install
+# ou
+yarn install
 ```
+
+3. **Configure a baseURL do Axios**
+
+Se estiver rodando com a API local mockada no Docker, edite `src/api/axios.ts`:
+
+```ts
+baseURL: "http://localhost:3000/api"
+```
+
+4. **Inicie o servidor de desenvolvimento:**
+
+```bash
+npm run dev
+# ou
+yarn dev
+```
+
+Acesse a aplicação em [http://localhost:5173](http://localhost:5173) (ou porta do Vite).
+
+---
+
+## 📝 Observações
+
+* A API mockada usada neste projeto é: `liviarachelc/medico-mockapi`
+
+---
+
+## 📬 Contato
+
+Para dúvidas ou sugestões, entre em contato pelo e-mail [liviarachelc@gmail.com](mailto:sliviarachelc@gmail.com).
