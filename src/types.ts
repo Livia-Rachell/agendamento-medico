@@ -9,6 +9,15 @@ export type Agendamentos = {
   medico: string;
 };
 
+export type Disponibilidade = {
+  medico: string;
+  especialidadeId: number;
+  diaSemana: string;
+  horaInicio: string;
+  horaFim: string;
+  duracaoConsultaMinutos: number;
+};
+
 export type Convenio = {
   id?: number;
   nome: string;

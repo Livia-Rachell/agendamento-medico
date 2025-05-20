@@ -34,3 +34,15 @@ export function formatarData(isoDate: string): string {
 
   return `${dataFormatada}, às ${horaFormatada}`;
 }
+
+export function getDiasSemana() {
+  return [
+    "Domingo",
+    "Segunda-feira",
+    "Terça-feira",
+    "Quarta-feira",
+    "Quinta-feira",
+    "Sexta-feira",
+    "Sábado",
+  ];
+}
