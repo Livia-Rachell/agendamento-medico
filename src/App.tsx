@@ -1,20 +1,22 @@
 import { Route, Routes } from "react-router";
 
-import Home from "./pages/Home";
-import Navbar from "./components/navbar";
+import Agendamentos from "./pages/Agendamentos";
+import Convenios from "./pages/Convenios";
+import Especialidades from "./pages/Especialidades";
+import Navbar from "./components/Navbar";
+import routes from "./routes";
 
-function App() {
+export default function App() {
   return (
     <>
       <Navbar />
       <div className="flex justify-center my-6">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/teste" element={<h1>teste</h1>} />
+          <Route path={routes.agendamentos} element={<Agendamentos />} />
+          <Route path={routes.especialidades} element={<Especialidades />} />
+          <Route path={routes.convenios} element={<Convenios />} />
         </Routes>
       </div>
     </>
   );
 }
-
-export default App;

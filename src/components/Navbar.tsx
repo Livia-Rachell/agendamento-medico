@@ -1,6 +1,7 @@
 import { Link } from "react-router";
+import routes from "../routes";
 
-function Navbar() {
+export default function Navbar() {
   return (
     <div className="navbar bg-base-100 shadow-sm justify-center">
       <div className="container flex items-center">
@@ -14,19 +15,26 @@ function Navbar() {
           </Link>
         </div>
         <div className="navbar-end gap-3">
-          <Link to="" className="btn btn-ghost hover:text-primary">
+          <Link
+            to={routes.agendamentos}
+            className="btn btn-ghost hover:text-primary"
+          >
+            Agendamentos
+          </Link>
+          <Link
+            to={routes.especialidades}
+            className="btn btn-ghost hover:text-primary"
+          >
             Especialidades
           </Link>
-          <Link to="" className="btn btn-ghost hover:text-primary">
-            Convênio
-          </Link>
-          <Link to="" className="btn btn-ghost hover:text-primary">
-            Agendamentos
+          <Link
+            to={routes.convenios}
+            className="btn btn-ghost hover:text-primary"
+          >
+            Convênios
           </Link>
         </div>
       </div>
     </div>
   );
 }
-
-export default Navbar;
